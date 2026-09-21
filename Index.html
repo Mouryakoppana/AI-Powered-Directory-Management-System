@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI-Powered Directory Management System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>AI-Powered Directory Management System</h1>
+            <p>Simulated file organizer with rule-based AI learning (HTML + JS version).</p>
+        </header>
+
+        <section class="card">
+            <h2>Select Files / Folder</h2>
+            <p>
+                Choose files from your computer. The app will categorize them by extension.
+                Files are <strong>not moved</strong>, only analyzed for project demo.
+            </p>
+
+            <div class="inputs">
+                <label class="btn">
+                    Choose Files
+                    <input type="file" id="fileInput" multiple />
+                </label>
+
+                <!-- Works in Chrome / Edge for folder selection -->
+                <label class="btn secondary">
+                    Choose Folder (optional)
+                    <input type="file" id="dirInput" webkitdirectory multiple />
+                </label>
+            </div>
+
+            <button id="organizeBtn" class="btn primary">
+                Organize Files
+            </button>
+
+            <p id="status" class="status"></p>
+        </section>
+
+        <section class="card">
+            <h2>Summary (Category-wise)</h2>
+            <div id="summaryContainer" class="summary-container">
+                <p>No files processed yet.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Rules (Extension → Category)</h2>
+            <div id="rulesContainer" class="rules-container"></div>
+            <button id="resetRulesBtn" class="btn danger small">
+                Reset to Default Rules
+            </button>
+        </section>
+
+        <footer>
+            <p>Project: AI-Powered Directory Management System &middot; HTML + CSS + JS</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
